@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gradepointcalculator.SecondaryController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.4" prefHeight="456.0" prefWidth="680.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="60.0" prefWidth="298.0" spacing="30.0">
+                                 <children>
+                                    <Label text="MODULE" />
+                                    <TextField fx:id="moduleTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="298.0" spacing="40.0">
+                                 <children>
+                                    <Label text="GRADE" />
+                                    <TextField fx:id="gradeTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="69.0" prefHeight="60.0" prefWidth="298.0" spacing="20.0">
+                                 <children>
+                                    <Label text="CREDIT HOURS" />
+                                    <TextField fx:id="creditHoursTextField" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="128.0" prefHeight="60.0" prefWidth="298.0" spacing="10.0">
+                                 <children>
+                                    <Label text="MODULE CATEGORY" />
+                                    <ComboBox fx:id="modCategoryComboBox" prefHeight="25.0" prefWidth="171.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="141.0" prefWidth="298.0" spacing="50.0">
+                                 <children>
+                                    <Button fx:id="enterButton" mnemonicParsing="false" onAction="#methodEnterVariables" prefHeight="35.0" prefWidth="150.0" text="ENTER" />
+                                    <Button fx:id="backButton" mnemonicParsing="false" onAction="#methodGoBack" prefHeight="35.0" prefWidth="150.0" text="BACK" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="moduleColumn" prefWidth="117.0" text="MODULE" />
+                            <TableColumn fx:id="categColumn" prefWidth="133.0" text="CATEGORY" />
+                              <TableColumn fx:id="gradeColumn" prefWidth="75.0" text="GRADE" />
+                              <TableColumn fx:id="pointsColumn" prefWidth="67.0" text="POINTS" />
+                              <TableColumn fx:id="hoursColumn" prefWidth="79.0" text="HOURS" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane prefHeight="265.0" prefWidth="680.0">
+               <items>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button fx:id="gpaButton" mnemonicParsing="false" onAction="#methodGPAButton" prefHeight="40.0" prefWidth="200.0" text="CALCULATE GRADE POINT" />
+                        <Button disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Button" />
+                     </children>
+                  </HBox>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

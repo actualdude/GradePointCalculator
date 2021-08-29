@@ -1,0 +1,9 @@
+com\mycompany\gradepointcalculator\SecondaryController.class
+Content\GradePointTable.class
+module-info.class
+Utilities\MessageBox.class
+Content\AssignPoints.class
+Utilities\ModuleType.class
+com\mycompany\gradepointcalculator\PrimaryController.class
+Content\CalculateGradePoint.class
+com\mycompany\gradepointcalculator\App.class
